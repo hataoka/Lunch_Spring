@@ -1,0 +1,99 @@
+main {
+	witdh: 500px;
+	padding: 20px; /* 余白指定 */
+	background-color: #fff; /* 背景色指定 */
+	height: 100px; /* 高さ指定 */
+}
+
+body {
+	padding: 20px; /* 余白指定 */
+	text-align: center; /* 中央寄せ */
+	background-color: #fff; /* 背景色指定 */
+	height: 100px; /* 高さ指定 */
+}
+
+.text {
+	text-aligin: center;
+}
+
+.text-side {
+	text-align: left;
+	display: inline-block;
+	width: 300px;
+}
+
+
+table {
+	margin: 0 auto;
+	background-color: #fff; /* 背景色指定 */
+	height: 100px;
+}
+
+table, th, td {
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	line-height: 1.5;
+}
+
+table.type01 th {
+	width: 80px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	background: #3f3f3f;
+	color: #ffffff;
+}
+
+table.type01 td {
+	width: 250px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+tr:nth-child(even) {
+	background: #efefef;
+}
+
+h1 {
+	width: 500px;
+	padding: 7px;
+	text-align: center;
+	margin: 0 auto;
+	border-bottom: 1px solid #9790a4;
+	border-left: 10px solid #9790a4;
+	font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial',
+		'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo,
+		'ＭＳ Ｐゴシック', 'MS PGothic';
+	text-align: center;
+}
+
+p {
+	font-size: 20px;
+	font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial',
+		'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo,
+		'ＭＳ Ｐゴシック', 'MS PGothic';
+}
+
+.positive {
+	border: solid 1px #2196f3;
+	background: #2196f3;
+	color: #ffffff;
+	background: #2196f3;
+}
+
+.negative {
+	color: #ff6600;
+	border: solid 1px #ff6600;
+	background: #ffffff;
+}
+
+.default {
+	border: 1px solid #000;
+	border-radius: 0;
+	background: #fff;
+}
+
+.default:hover {
+	color: #fff;
+	background: #000;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<title>弁当注文システム</title>
+</head>
+<body>
+	<main>
+
+		<h1>弁当注文システム</h1>
+		<p>弁当注文数集計結果</p>
+
+		<table class="type01">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>購入数合計</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="purchasesum: ${purchasesumList}">
+					<td><a th:text="${purchasesum.id}"
+						th:href="@{/getAdminDetail(id=${purchasesum.id})}"></a></td>
+					<td><a th:text="${purchasesum.suu}"></a></td>
+				<tr>
+					<td>合計</td>
+					<td th:text="${total}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</main>
+</body>
+</html>

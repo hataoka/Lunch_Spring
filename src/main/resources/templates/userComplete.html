@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<title>弁当注文システム</title>
+</head>
+<body>
+	<main>
+		<h1>弁当注文システム</h1>
+		<p>注文完了しました</p>
+		<p>注文年月日</p>
+		<p th:text="${date}" />
+		<p>注文数</p>
+		<p th:text="${suu}" />
+
+		<form action="#" th:action="@{/backuserTop}" method="post">
+			<input class="default" type="submit"value="トップへ戻る">
+		</form>
+
+	</main>
+</body>
+</html>

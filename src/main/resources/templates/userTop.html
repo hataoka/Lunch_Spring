@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<title>ユーザートップ画面</title>
+</head>
+<body>
+	<main>
+		<h1>弁当注文システム</h1>
+
+		<p th:text="${userId.name} + 'さんこんにちは'"></p>
+		<div class="text">
+			<div class="text-side">
+				<form th:action="@{/purchaseCheck}" method="post">
+					<p>
+						注文年月日 <input type="date" required="required" name="date">
+					</p>
+					<p>
+						注文数 <input type="number" required="required" name="suu" min="0">
+						<input class="default" type="submit" value="購入">
+					</p>
+				</form>
+			</div>
+		</div>
+
+		<form th:action="@{/userChangeMonth}" method="post">
+			<p th:text="${userId.name} + 'さんの注文明細'"></p>
+			<p>
+				<input type="month" required="required" name="date"> <input
+					class="default" type="submit" value="表示更新">
+			</p>
+		</form>
+		<table class="type01">
+			<thead>
+				<tr>
+					<th>注文年月日</th>
+					<th>注文数</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="purchase: ${purchaseList}">
+					<td th:text="${purchase.purchase_date}" />
+					<td th:text="${purchase.suu}" />
+				</tr>
+				<tr>
+					<td>合計</td>
+					<td th:text="${total}"></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+	</main>
+
+</body>
+</html>
